@@ -1,0 +1,25 @@
+import scala.collection.JavaConverters._
+
+// you can write to stdout for debugging purposes, e.g.
+// println("this is a debug message")
+
+object Solution {
+    def solution(a: Array[Int], k: Int): Array[Int] = {
+        // write your code in Scala 2.12
+        
+        if (!a.isEmpty) {
+            val rotateCount = k % a.length
+            for (i <- 1 to rotateCount) rotate(a)
+        }
+        
+        return a
+    }
+    
+    def rotate(arr: Array[Int]) = {
+        for (i <- 1 until arr.length) {
+            var temp = arr(0)
+            arr(0) = arr(i)
+            arr(i) = temp
+        }
+    }
+}
