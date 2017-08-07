@@ -1,4 +1,5 @@
 import scala.collection.JavaConverters._
+import scala.collection.mutable
 
 // you can write to stdout for debugging purposes, e.g.
 // println("this is a debug message")
@@ -8,7 +9,7 @@ object Solution {
         // write your code in Scala 2.12
         
         val n = a.length
-        var set: Set[Int] = Set()
+        var set = mutable.HashSet[Int]()
         
         for (i <- 1 to n + 1) set += i
         
