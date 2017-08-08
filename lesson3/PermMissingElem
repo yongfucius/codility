@@ -9,7 +9,7 @@ object Solution {
         // write your code in Scala 2.12
         
         val n = a.length
-        var set = mutable.HashSet[Int]()
+        var set = mutable.Set[Int]()
         
         for (i <- 1 to n + 1) set += i
         
