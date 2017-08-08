@@ -1,4 +1,5 @@
 import scala.collection.JavaConverters._
+import scala.collection.mutable
 
 // you can write to stdout for debugging purposes, e.g.
 // println("this is a debug message")
@@ -6,13 +7,13 @@ import scala.collection.JavaConverters._
 object Solution {
     def solution(a: Array[Int]): Int = {
         // write your code in Scala 2.12
-        var set: Set[Int] = Set()
+        var set = mutable.Set[Int]()
         
-        a.foreach((i) => {
-            if (set.contains(i)) set = set - i
-            else set = set + i
-        })
+        a.foreach { (i) => 
+            if (set.contains(i)) set -= i
+            else set += i
+        }
         
-        return set.last
+        set.last
     }
 }
