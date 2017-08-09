@@ -1,5 +1,4 @@
 import scala.collection.JavaConverters._
-import scala.collection.mutable
 
 // you can write to stdout for debugging purposes, e.g.
 // println("this is a debug message")
@@ -9,14 +8,12 @@ object Solution {
         // write your code in Scala 2.12
         
         val n = a.length
-        var set = mutable.Set[Int]()
+        val l: Long = n + 1
         
-        for (i <- 1 to n + 1) set += i
+        var sum = (n+1) * (1 + l) / 2
         
-        for (i <- 0 until a.length) {
-            set -= a(i)
-        }
+        a.foreach(i => sum -= i)
         
-        set.last
+        sum.toInt
     }
 }
