@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Solution2 {
 
-  // (new int[]{-1, -1, 1, 0, -1, 1, 0, 1, -1, -1}, 2)
+  // (new int[]{-1, -1, 1, 0, -1, 1, 0, 1, -1, -1}, 2) -> 6
   public int solution(int[] A, int S) {
     int N = A.length;
 
