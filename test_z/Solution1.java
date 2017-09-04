@@ -2,10 +2,10 @@ import java.util.Arrays;
 
 public class Solution1 {
 
-  // (1 ,8, 3, 2, 6, 4)
-  // (0, 0, 0, 7, 8, 9)
-  // (2, 4, 5, 9, 5, 9)
-  // (9, 9, 9, 9, 9, 9)
+  // (1 ,8, 3, 2, 6, 4) -> 12:36:48
+  // (0, 0, 0, 7, 8, 9) -> 07:08:09
+  // (2, 4, 5, 9, 5, 9) -> NOT IMPOSSIBLE
+  // (9, 9, 9, 9, 9, 9) -> NOT IMPOSSIBLE
   public String solution(int A, int B, int C, int D, int E, int F) {
     int[] array = {A, B, C, D, E, F};
 
